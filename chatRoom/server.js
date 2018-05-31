@@ -26,8 +26,8 @@ function send404(response) {
 
 // 相应封装
 function sendFile(response, filePath, fileContent) {
-    console.log(mime);
-    response.writeHead(200, { 'Content-Type': mime.lookup(path.basename(filePath)) });
+    // console.log(mime);
+    response.writeHead(200, { 'Content-Type': mime.getType(path.basename(filePath)) });
     response.end(fileContent);
 }
 
