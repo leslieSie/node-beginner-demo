@@ -17,6 +17,7 @@ let server = http.createServer((req, res) => {
     serveStatic(res, cache, absPath);
 }).listen(3000);
 
+
 // 404 封装
 function send404(response) {
     response.writeHead(404, { 'Content-Type': 'text/plain' });
@@ -48,3 +49,8 @@ function serveStatic(response, cache, absPath) {
         });
     }
 }
+
+let chatServer = require('./lib/chat_server.js');
+// console.log('this is split');
+// console.log(chatServer);
+// chatServer.listen(server);
