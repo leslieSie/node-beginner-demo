@@ -4,7 +4,8 @@ let guestNumber = 1;
 let nickName = {};
 let nickUsed = {};
 let currentRooms = {};
-
+// 需要重写
+// console.log("this is test");
 exports.listen = function(server) {
     io = socketio.listen(server); // 启动 socketIO 服务器
     io.set('log level', 1);
