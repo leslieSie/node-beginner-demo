@@ -18,8 +18,8 @@ let server = http.createServer((req, res) => {
     let absPath = './' + filePath;
     serveStatic(res, cache, absPath);
 
-}).listen(3000);
-console.log('host localhost:3000');
+});
+// console.log('host localhost:3000');
 
 
 // 404 响应头封装
@@ -55,4 +55,6 @@ function serveStatic(response, cache, absPath) {
     }
 }
 
+// 聊天服务器核心文件
 let chatServer = require('./lib/chat_server.js');
+chatServer.listen(server);
